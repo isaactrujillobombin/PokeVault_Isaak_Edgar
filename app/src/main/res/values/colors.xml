@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="navy_dark">#FF0F1E3D</color>
+    <color name="navy_overlay_top">#D90B1B3D</color>
+    <color name="navy_overlay_bottom">#B30B1B3D</color>
+    <color name="yellow">#FFF7C948</color>
+    <color name="blue">#FF2F66F0</color>
+    <color name="gray_text">#FF6B7488</color>
+    <color name="gray_icon">#FF8A94A6</color>
+    <color name="gray_light">#FFEEF1F6</color>
+    <color name="stroke_light">#FFE6EAF2</color>
+    <color name="tile_blue_bg">#FFEAF1FF</color>
+    <color name="tile_yellow_bg">#FFFFF3CC</color>
+    <color name="tile_red_bg">#FFFFEDED</color>
+    <color name="icon_amber">#FFB7791F</color>
+    <color name="icon_red">#FFF0556A</color>
 </resources>

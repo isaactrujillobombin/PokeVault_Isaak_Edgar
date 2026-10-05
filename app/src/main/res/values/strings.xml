@@ -1,3 +1,42 @@
 <resources>
-    <string name="app_name">PokeVault</string>
+    <string name="app_name">PokéVault</string>
+
+    <string name="brand">POKÉVAULT</string>
+    <string name="eyebrow">TU PRÓXIMA CARTA FAVORITA</string>
+    <string name="hero_title_1">Atrápalas todas.</string>
+    <string name="hero_title_2">Juega sin límites.</string>
+    <string name="hero_desc">Cartas auténticas, sobres sellados y piezas únicas para tu colección.</string>
+    <string name="btn_explore">Explorar novedades</string>
+
+    <string name="shop_title">Explora la tienda</string>
+    <string name="cat_cards">Cartas</string>
+    <string name="cat_packs">Sobres</string>
+    <string name="cat_rarities">Rarezas</string>
+
+    <string name="featured_title">Destacado de hoy</string>
+    <string name="see_all">Ver todo</string>
+    <string name="badge_new">NUEVO</string>
+    <string name="product_category">CARTA INDIVIDUAL · NM</string>
+    <string name="product_name">Charizard · Edición especial</string>
+    <string name="product_set">Base Set</string>
+    <string name="product_price">12.500,00 €</string>
+    <string name="product_old_price">14.999,00 €</string>
+
+    <string name="nav_home">Inicio</string>
+    <string name="nav_search">Buscar</string>
+    <string name="nav_collection">Colección</string>
+    <string name="nav_profile">Perfil</string>
+
+    <string name="cd_logo">Logo de PokéVault</string>
+    <string name="cd_notifications">Notificaciones</string>
+    <string name="cd_cards">Cartas</string>
+    <string name="cd_packs">Sobres</string>
+    <string name="cd_rarities">Rarezas</string>
+    <string name="cd_product">Carta Charizard</string>
+    <string name="cd_favorite">Añadir a favoritos</string>
+    <string name="cd_bag">Carrito</string>
+    <string name="cd_nav_home">Inicio</string>
+    <string name="cd_nav_search">Buscar</string>
+    <string name="cd_nav_collection">Colección</string>
+    <string name="cd_nav_profile">Perfil</string>
 </resources>
