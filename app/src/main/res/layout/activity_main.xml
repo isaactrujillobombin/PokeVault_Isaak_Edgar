@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    tools:background="@color/navy_dark"
     tools:context=".MainActivity">
 
     <!-- ========== GUÍAS ========== -->
@@ -29,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.42" />
+        app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideImageEnd"
@@ -180,11 +181,432 @@
 
 
     <!-- ========== BLOQUE A2: PANEL Y EXPLORA LA TIENDA ========== -->
+    <View
+        android:id="@+id/viewPanel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_panel_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidePanelTop" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideCol1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideCol2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="205dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideCol3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.81" />
+
+    <TextView
+        android:id="@+id/tvShopTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/shop_title"
+        android:textColor="@color/navy_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideStart"
+        app:layout_constraintTop_toTopOf="@id/viewPanel" />
+
+    <ImageView
+        android:id="@+id/tileCards"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_tile"
+        android:contentDescription="@string/cd_cards"
+        android:padding="21dp"
+        android:src="@drawable/ic_cards"
+        app:backgroundTint="@color/tile_blue_bg"
+        app:layout_constraintEnd_toEndOf="@id/guideCol1"
+        app:layout_constraintStart_toStartOf="@id/guideCol1"
+        app:layout_constraintTop_toBottomOf="@id/tvShopTitle"
+        app:tint="@color/blue" />
+
+    <ImageView
+        android:id="@+id/tilePacks"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_tile"
+        android:contentDescription="@string/cd_packs"
+        android:padding="21dp"
+        android:src="@drawable/ic_pack"
+        app:backgroundTint="@color/tile_yellow_bg"
+        app:layout_constraintEnd_toEndOf="@id/guideCol2"
+        app:layout_constraintStart_toStartOf="@id/guideCol2"
+        app:layout_constraintTop_toTopOf="@id/tileCards"
+        app:tint="@color/icon_amber" />
+
+    <ImageView
+        android:id="@+id/tileRarities"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_tile"
+        android:contentDescription="@string/cd_rarities"
+        android:padding="21dp"
+        android:src="@drawable/ic_sparkles"
+        app:backgroundTint="@color/tile_red_bg"
+        app:layout_constraintEnd_toEndOf="@id/guideCol3"
+        app:layout_constraintStart_toStartOf="@id/guideCol3"
+        app:layout_constraintTop_toTopOf="@id/tileCards"
+        app:tint="@color/icon_red" />
+
+    <TextView
+        android:id="@+id/tvCatCards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/cat_cards"
+        android:textColor="@color/navy_dark"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tileCards"
+        app:layout_constraintStart_toStartOf="@id/tileCards"
+        app:layout_constraintTop_toBottomOf="@id/tileCards" />
+
+    <TextView
+        android:id="@+id/tvCatPacks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cat_packs"
+        android:textColor="@color/navy_dark"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tilePacks"
+        app:layout_constraintStart_toStartOf="@id/tilePacks"
+        app:layout_constraintTop_toTopOf="@id/tvCatCards" />
+
+    <TextView
+        android:id="@+id/tvCatRarities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cat_rarities"
+        android:textColor="@color/navy_dark"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tileRarities"
+        app:layout_constraintStart_toStartOf="@id/tileRarities"
+        app:layout_constraintTop_toTopOf="@id/tvCatCards" />
 
     <!-- ========== BLOQUE B1: DESTACADO DE HOY ========== -->
+    <TextView
+        android:id="@+id/tvFeaturedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/featured_title"
+        android:textColor="@color/navy_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideStart"
+        app:layout_constraintTop_toBottomOf="@id/tvCatCards" />
 
+    <ImageView
+        android:id="@+id/ivSeeAllChevron"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintBottom_toBottomOf="@id/tvFeaturedTitle"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintTop_toTopOf="@id/tvFeaturedTitle"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/tvSeeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="@string/see_all"
+        android:textColor="@color/blue"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvFeaturedTitle"
+        app:layout_constraintEnd_toStartOf="@id/ivSeeAllChevron"
+        app:layout_constraintTop_toTopOf="@id/tvFeaturedTitle" />
+
+    <View
+        android:id="@+id/viewFeaturedCard"
+        android:layout_width="0dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_card"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintStart_toStartOf="@id/guideStart"
+        app:layout_constraintTop_toBottomOf="@id/tvFeaturedTitle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProduct"
+        android:layout_width="124dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/cd_product"
+        android:scaleType="centerCrop"
+        android:src="@drawable/product_charizard"
+        app:layout_constraintBottom_toBottomOf="@id/viewFeaturedCard"
+        app:layout_constraintStart_toStartOf="@id/viewFeaturedCard"
+        app:layout_constraintTop_toTopOf="@id/viewFeaturedCard"
+        app:shapeAppearance="@style/RoundedLeft" />
+
+    <TextView
+        android:id="@+id/tvBadgeNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_pill"
+        android:letterSpacing="0.05"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="4dp"
+        android:text="@string/badge_new"
+        android:textColor="@color/navy_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/yellow"
+        app:layout_constraintStart_toStartOf="@id/ivProduct"
+        app:layout_constraintTop_toTopOf="@id/ivProduct" />
+
+    <TextView
+        android:id="@+id/tvProductCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:letterSpacing="0.05"
+        android:text="@string/product_category"
+        android:textColor="@color/blue"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/viewFeaturedCard"
+        app:layout_constraintStart_toEndOf="@id/ivProduct"
+        app:layout_constraintTop_toTopOf="@id/viewFeaturedCard" />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/product_name"
+        android:textColor="@color/navy_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvProductCategory"
+        app:layout_constraintStart_toStartOf="@id/tvProductCategory"
+        app:layout_constraintTop_toBottomOf="@id/tvProductCategory" />
+
+    <TextView
+        android:id="@+id/tvProductSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/product_set"
+        android:textColor="@color/gray_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tvProductCategory"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="@string/product_price"
+        android:textColor="@color/navy_dark"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/viewFeaturedCard"
+        app:layout_constraintStart_toStartOf="@id/tvProductCategory" />
+
+    <TextView
+        android:id="@+id/tvProductOldPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/product_old_price"
+        android:textColor="@color/gray_icon"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvProductPrice"
+        app:layout_constraintStart_toEndOf="@id/tvProductPrice" />
+
+    <ImageView
+        android:id="@+id/btnFavorite"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_circle"
+        android:contentDescription="@string/cd_favorite"
+        android:padding="9dp"
+        android:src="@drawable/ic_heart"
+        app:backgroundTint="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="@id/viewFeaturedCard"
+        app:layout_constraintEnd_toEndOf="@id/viewFeaturedCard"
+        app:tint="@color/gray_text" />
 
     <!-- ========== BLOQUE B2: BARRA INFERIOR ========== -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideNav1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideNav2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideNav3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideNav4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <View
+        android:id="@+id/viewNav"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:background="@drawable/bg_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/navHomeIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="14dp"
+        android:contentDescription="@string/cd_nav_home"
+        android:src="@drawable/ic_home"
+        app:layout_constraintEnd_toEndOf="@id/guideNav1"
+        app:layout_constraintStart_toStartOf="@id/guideNav1"
+        app:layout_constraintTop_toTopOf="@id/viewNav"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/navHomeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/nav_home"
+        android:textColor="@color/blue"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/navHomeIcon"
+        app:layout_constraintStart_toStartOf="@id/navHomeIcon"
+        app:layout_constraintTop_toBottomOf="@id/navHomeIcon" />
+
+    <ImageView
+        android:id="@+id/navSearchIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/cd_nav_search"
+        android:src="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="@id/guideNav2"
+        app:layout_constraintStart_toStartOf="@id/guideNav2"
+        app:layout_constraintTop_toTopOf="@id/navHomeIcon"
+        app:tint="@color/gray_icon" />
+
+    <TextView
+        android:id="@+id/navSearchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_search"
+        android:textColor="@color/gray_icon"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/navSearchIcon"
+        app:layout_constraintStart_toStartOf="@id/navSearchIcon"
+        app:layout_constraintTop_toTopOf="@id/navHomeLabel" />
+
+    <ImageView
+        android:id="@+id/navCollectionIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/cd_nav_collection"
+        android:src="@drawable/ic_cards"
+        app:layout_constraintEnd_toEndOf="@id/guideNav3"
+        app:layout_constraintStart_toStartOf="@id/guideNav3"
+        app:layout_constraintTop_toTopOf="@id/navHomeIcon"
+        app:tint="@color/gray_icon" />
+
+    <TextView
+        android:id="@+id/navCollectionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_collection"
+        android:textColor="@color/gray_icon"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/navCollectionIcon"
+        app:layout_constraintStart_toStartOf="@id/navCollectionIcon"
+        app:layout_constraintTop_toTopOf="@id/navHomeLabel" />
+
+    <ImageView
+        android:id="@+id/navProfileIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/cd_nav_profile"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintEnd_toEndOf="@id/guideNav4"
+        app:layout_constraintStart_toStartOf="@id/guideNav4"
+        app:layout_constraintTop_toTopOf="@id/navHomeIcon"
+        app:tint="@color/gray_icon" />
+
+    <TextView
+        android:id="@+id/navProfileLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_profile"
+        android:textColor="@color/gray_icon"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/navProfileIcon"
+        app:layout_constraintStart_toStartOf="@id/navProfileIcon"
+        app:layout_constraintTop_toTopOf="@id/navHomeLabel" />
+
+    <ImageView
+        android:id="@+id/btnBag"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_circle_navy_ring"
+        android:contentDescription="@string/cd_bag"
+        android:padding="18dp"
+        android:src="@drawable/ic_bag"
+        app:layout_constraintBottom_toBottomOf="@id/viewNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

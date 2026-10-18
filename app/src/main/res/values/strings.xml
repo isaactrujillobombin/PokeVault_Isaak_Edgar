@@ -20,7 +20,7 @@
     <string name="product_name">Charizard · Edición especial</string>
     <string name="product_set">Base Set</string>
     <string name="product_price">12.500,00 €</string>
-    <string name="product_old_price">14.999,00 €</string>
+    <string name="product_old_price"><strike>14.999,00 €</strike></string>
 
     <string name="nav_home">Inicio</string>
     <string name="nav_search">Buscar</string>
